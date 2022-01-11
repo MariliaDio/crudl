@@ -67,7 +67,7 @@ class UsuarioController extends Controller
     public function search(Request $request){
         $usuarios = Usuario::where('nomec', 'LIKE', "%{$request->search}%")
         ->orWhere('cpf', '=', $request->search)
-        ->paginate();
+        ->paginate(7);
 
         return view('usuarios.index', compact('usuarios'));
     }

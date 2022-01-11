@@ -27,7 +27,7 @@
         <div class="me-auto p-2 bd-highlight">
           <form class="d-flex" action="{{route('usuarios.search')}}" method="post">
             @csrf
-            <input class="form-control me-2" type="text" name="search" placeholder="Procurar" aria-label="Search">
+            <input class="form-control me-2" type="text" name="search" placeholder="Buscar por nome ou CPF" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit">Procurar</button>
           </form>
         </div>
@@ -43,7 +43,7 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Foto</th>
+              <th scope="col">  Foto</th>
               <th scope="col">Nome Completo</th>
               <th scope="col">CPF</th>
               <th scope="col">Idade</th>
@@ -55,7 +55,7 @@
             @foreach($usuarios as $usuario)
             <tr>
               <td>{{$usuario->id}}</td>
-              <td>Foto</td>
+              <td><img src="https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14046.jpg" alt=""></td>
               <td>{{ $usuario->nomec}}</td>
               <td>{{$usuario->cpf}}</td>
               <td>{{ $usuario->idade}}</td>
